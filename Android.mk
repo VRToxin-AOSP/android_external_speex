@@ -129,7 +129,8 @@ LOCAL_MODULE:= libspeex_googletts
 LOCAL_SDK_VERSION := 14
 
 LOCAL_CFLAGS+= -DEXPORT= -DFLOATING_POINT -DUSE_SMALLFT -DVAR_ARRAYS
-LOCAL_CFLAGS+= -O3 -fstrict-aliasing -fprefetch-loop-arrays
+LOCAL_CFLAGS+= -O3 -fstrict-aliasing -fprefetch-loop-arrays \
+	-Wno-unused-parameter -Werror
 
 LOCAL_CFLAGS_x86 += -D_USE_SSE -D_USE_SSE2
 LOCAL_CFLAGS_x86_64 += -D_USE_SSE -D_USE_SSE2
